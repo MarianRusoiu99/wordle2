@@ -12,6 +12,10 @@ export default function GameOver(){
        
       } = React.useContext(AppContext);
      
+
+      const clickHandler = function(){
+        window.location.reload(false);
+      }
       return (
         <div className="gameOver">
           <h3>
@@ -20,9 +24,12 @@ export default function GameOver(){
               : "You Failed to Guess the Word"}
           </h3>
           <h1>Correct Word: {correctWord}</h1>
-          {gameOver.guessedWord && (
+          {gameOver.guessedWord && (<div>
             <h3>You guessed in {currAttempt.attempt} attempts</h3>
+             <h1 className="restart--button" onClick={clickHandler}>Start a new game?</h1> 
+             </div>
           )}
+
         </div>
       );
     }

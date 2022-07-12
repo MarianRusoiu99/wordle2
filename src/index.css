@@ -130,3 +130,10 @@
   #disabled {
     background-color: #3a393c;
   }
+  .restart--button{
+    padding: 5px;
+    background-color: white;
+    color:black;
+    border-radius:10px;
+
+  }
